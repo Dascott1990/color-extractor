@@ -1,0 +1,155 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;  /* Light background for professionalism */
+    color: #333;  /* Dark text color for contrast */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for all elements */
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Flex container for file input and icon button */
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* File input section */
+input[type="file"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    outline: none;
+    width: 60%;  /* Adjust width */
+    transition: border-color 0.3s;
+}
+
+input[type="file"]:focus {
+    border-color: #2980b9;
+}
+
+/* Icon Button Styling */
+button#iconBtn {
+    background-color: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 2rem;  /* Icon size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+button#iconBtn:hover {
+    background-color: #3498db;
+    color: white;
+    transform: scale(1.1);  /* Slight increase on hover */
+}
+
+/* Center the uploaded image with box-shadow and rounded corners */
+.image-preview-container {
+    display: none;  /* Hide initially until an image is uploaded */
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-preview {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Box shadow for the image */
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.image-preview:hover {
+    transform: scale(1.05);  /* Add zoom effect */
+}
+
+/* Color Results Section */
+#colorResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Individual Color Swatches */
+.color-swatch {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-swatch:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Adding the color's HEX code on hover */
+.color-swatch p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.color-swatch:hover p {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    /* For smaller screens, make the input and button 100% width */
+    input[type="file"], button#iconBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
